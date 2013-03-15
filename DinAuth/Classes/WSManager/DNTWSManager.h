@@ -18,6 +18,8 @@
 @property (nonatomic, strong) NSOperationQueue *queue;
 //- (NSString *)pruebaLlamadaWS;
 
+- (void)llamadaSoap;
+
 + (BOOL)loginWithUser:(NSString *)username andPassword:(NSString *)password;
 + (NSArray *)listAuthorizations;
 + (BOOL)configureUserkey:(NSString *)key WithUser:(NSString *)username andPassword:(NSString *)password;

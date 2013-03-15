@@ -10,6 +10,14 @@
 		CF384CB016E88FB200C92454 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF384CAF16E88FB200C92454 /* libsqlite3.0.dylib */; };
 		CF384CBE16E8A68700C92454 /* DNTSqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF384CBD16E8A68700C92454 /* DNTSqliteManager.m */; };
 		CF384CC116E8AB5B00C92454 /* DNTDatabase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = CF384CC016E8AB5B00C92454 /* DNTDatabase.sqlite */; };
+		CF397D4916F1E0B5009DEB7A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF397D4816F1E0B5009DEB7A /* libxml2.dylib */; };
+		CF397D5816F1E0CC009DEB7A /* G4WSSvc.m in Sources */ = {isa = PBXBuildFile; fileRef = CF397D4B16F1E0CC009DEB7A /* G4WSSvc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CF397D5916F1E0CC009DEB7A /* ns1.m in Sources */ = {isa = PBXBuildFile; fileRef = CF397D4D16F1E0CC009DEB7A /* ns1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CF397D5A16F1E0CC009DEB7A /* NSDate+ISO8601Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CF397D4F16F1E0CC009DEB7A /* NSDate+ISO8601Parsing.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CF397D5B16F1E0CC009DEB7A /* NSDate+ISO8601Unparsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CF397D5116F1E0CC009DEB7A /* NSDate+ISO8601Unparsing.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CF397D5C16F1E0CC009DEB7A /* USAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CF397D5316F1E0CC009DEB7A /* USAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CF397D5D16F1E0CC009DEB7A /* USGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = CF397D5516F1E0CC009DEB7A /* USGlobals.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CF397D5E16F1E0CC009DEB7A /* xsd.m in Sources */ = {isa = PBXBuildFile; fileRef = CF397D5716F1E0CC009DEB7A /* xsd.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CFF766DE16F0830F0090CAA5 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF766D116F0830F0090CAA5 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CFF766DF16F0830F0090CAA5 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF766D316F0830F0090CAA5 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CFF766E016F0830F0090CAA5 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF766D516F0830F0090CAA5 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -85,6 +93,21 @@
 		CF384CBC16E8A68700C92454 /* DNTSqliteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNTSqliteManager.h; sourceTree = "<group>"; };
 		CF384CBD16E8A68700C92454 /* DNTSqliteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNTSqliteManager.m; sourceTree = "<group>"; };
 		CF384CC016E8AB5B00C92454 /* DNTDatabase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DNTDatabase.sqlite; sourceTree = "<group>"; };
+		CF397D4816F1E0B5009DEB7A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		CF397D4A16F1E0CC009DEB7A /* G4WSSvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4WSSvc.h; sourceTree = "<group>"; };
+		CF397D4B16F1E0CC009DEB7A /* G4WSSvc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4WSSvc.m; sourceTree = "<group>"; };
+		CF397D4C16F1E0CC009DEB7A /* ns1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ns1.h; sourceTree = "<group>"; };
+		CF397D4D16F1E0CC009DEB7A /* ns1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ns1.m; sourceTree = "<group>"; };
+		CF397D4E16F1E0CC009DEB7A /* NSDate+ISO8601Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ISO8601Parsing.h"; sourceTree = "<group>"; };
+		CF397D4F16F1E0CC009DEB7A /* NSDate+ISO8601Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ISO8601Parsing.m"; sourceTree = "<group>"; };
+		CF397D5016F1E0CC009DEB7A /* NSDate+ISO8601Unparsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ISO8601Unparsing.h"; sourceTree = "<group>"; };
+		CF397D5116F1E0CC009DEB7A /* NSDate+ISO8601Unparsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ISO8601Unparsing.m"; sourceTree = "<group>"; };
+		CF397D5216F1E0CC009DEB7A /* USAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAdditions.h; sourceTree = "<group>"; };
+		CF397D5316F1E0CC009DEB7A /* USAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USAdditions.m; sourceTree = "<group>"; };
+		CF397D5416F1E0CC009DEB7A /* USGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USGlobals.h; sourceTree = "<group>"; };
+		CF397D5516F1E0CC009DEB7A /* USGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USGlobals.m; sourceTree = "<group>"; };
+		CF397D5616F1E0CC009DEB7A /* xsd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xsd.h; sourceTree = "<group>"; };
+		CF397D5716F1E0CC009DEB7A /* xsd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xsd.m; sourceTree = "<group>"; };
 		CFF766D016F0830F0090CAA5 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		CFF766D116F0830F0090CAA5 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		CFF766D216F0830F0090CAA5 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
@@ -277,6 +300,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF397D4916F1E0B5009DEB7A /* libxml2.dylib in Frameworks */,
 				CF384CB016E88FB200C92454 /* libsqlite3.0.dylib in Frameworks */,
 				ED15F1D716D2E3750015F465 /* MessageUI.framework in Frameworks */,
 				ED15F1D616D2E3640015F465 /* MapKit.framework in Frameworks */,
@@ -309,6 +333,27 @@
 				CF384CBD16E8A68700C92454 /* DNTSqliteManager.m */,
 			);
 			path = SQLite;
+			sourceTree = "<group>";
+		};
+		CF397D0816F1D2C1009DEB7A /* Soap */ = {
+			isa = PBXGroup;
+			children = (
+				CF397D4A16F1E0CC009DEB7A /* G4WSSvc.h */,
+				CF397D4B16F1E0CC009DEB7A /* G4WSSvc.m */,
+				CF397D4C16F1E0CC009DEB7A /* ns1.h */,
+				CF397D4D16F1E0CC009DEB7A /* ns1.m */,
+				CF397D4E16F1E0CC009DEB7A /* NSDate+ISO8601Parsing.h */,
+				CF397D4F16F1E0CC009DEB7A /* NSDate+ISO8601Parsing.m */,
+				CF397D5016F1E0CC009DEB7A /* NSDate+ISO8601Unparsing.h */,
+				CF397D5116F1E0CC009DEB7A /* NSDate+ISO8601Unparsing.m */,
+				CF397D5216F1E0CC009DEB7A /* USAdditions.h */,
+				CF397D5316F1E0CC009DEB7A /* USAdditions.m */,
+				CF397D5416F1E0CC009DEB7A /* USGlobals.h */,
+				CF397D5516F1E0CC009DEB7A /* USGlobals.m */,
+				CF397D5616F1E0CC009DEB7A /* xsd.h */,
+				CF397D5716F1E0CC009DEB7A /* xsd.m */,
+			);
+			path = Soap;
 			sourceTree = "<group>";
 		};
 		CFF766CF16F0830F0090CAA5 /* JSON */ = {
@@ -692,6 +737,7 @@
 		EDEF6ECC16EA3D74001469EC /* WSManager */ = {
 			isa = PBXGroup;
 			children = (
+				CF397D0816F1D2C1009DEB7A /* Soap */,
 				EDEF6ECD16EA3D86001469EC /* DNTWSManager.h */,
 				EDEF6ECE16EA3D86001469EC /* DNTWSManager.m */,
 			);
@@ -718,6 +764,7 @@
 		EDFBEE2A16C563D80092DE9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF397D4816F1E0B5009DEB7A /* libxml2.dylib */,
 				CF384CAF16E88FB200C92454 /* libsqlite3.0.dylib */,
 				ED15F1D516D2E3640015F465 /* MapKit.framework */,
 				ED15F1D316D2E35B0015F465 /* AudioToolbox.framework */,
@@ -876,6 +923,13 @@
 				CFF766E216F0830F0090CAA5 /* SBJsonBase.m in Sources */,
 				CFF766E316F0830F0090CAA5 /* SBJsonParser.m in Sources */,
 				CFF766E416F0830F0090CAA5 /* SBJsonWriter.m in Sources */,
+				CF397D5816F1E0CC009DEB7A /* G4WSSvc.m in Sources */,
+				CF397D5916F1E0CC009DEB7A /* ns1.m in Sources */,
+				CF397D5A16F1E0CC009DEB7A /* NSDate+ISO8601Parsing.m in Sources */,
+				CF397D5B16F1E0CC009DEB7A /* NSDate+ISO8601Unparsing.m in Sources */,
+				CF397D5C16F1E0CC009DEB7A /* USAdditions.m in Sources */,
+				CF397D5D16F1E0CC009DEB7A /* USGlobals.m in Sources */,
+				CF397D5E16F1E0CC009DEB7A /* xsd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -965,14 +1019,18 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Juan Carlos Loren (A54D4Y9CG9)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DinAuth/DinAuth-Prefix.pch";
-				HEADER_SEARCH_PATHS = "/Airship/**";
+				HEADER_SEARCH_PATHS = (
+					"/Airship/**",
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "DinAuth/DinAuth-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/DinAuth/Airship\"",
 				);
-				OTHER_CFLAGS = "";
+				OTHER_CFLAGS = "-I/usr/include/libxml2";
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9A13B36A-D1B2-4B58-86A0-7EA119BA752A";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9A13B36A-D1B2-4B58-86A0-7EA119BA752A";
@@ -987,7 +1045,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Juan Carlos Loren (A54D4Y9CG9)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DinAuth/DinAuth-Prefix.pch";
-				HEADER_SEARCH_PATHS = "/Airship/**";
+				HEADER_SEARCH_PATHS = (
+					"/Airship/**",
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "DinAuth/DinAuth-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -995,9 +1056,11 @@
 					"\"$(SRCROOT)/DinAuth/Airship\"",
 				);
 				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
+					"-I/usr/include/libxml2",
 					"-DDISTRIBUTION=1",
+					"-DNS_BLOCK_ASSERTIONS=1",
 				);
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9A13B36A-D1B2-4B58-86A0-7EA119BA752A";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9A13B36A-D1B2-4B58-86A0-7EA119BA752A";

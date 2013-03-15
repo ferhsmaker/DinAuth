@@ -10,6 +10,7 @@
 #import "ASIFormDataRequest.h"
 #import "SBJSON.h"
 #import "DNTAppDelegate.h"
+#import "G4WSSvc.h"
 
 /*URLS*/
 #define kWSLoginURL                         @""
@@ -37,51 +38,35 @@
 
 @synthesize queue = _queue;
 
-//- (NSString *)pruebaLlamadaWS{
-//    
-//    
-//    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:@"http://demo.vademecumdata.es/vweb/xml/ws_search/EveryWhere?"]];
-//    if (request == nil)
-//        NSLog(@"no hay request");
-//    request.timeOutSeconds = 8;
-//    [request startSynchronous];
-//    NSError *error = [request error];
-//    if (error){
-//        NSLog(@"WSError:%@", error);
-//        
-//    }
-//    
-//    //    NSString *response = [request responseString];
-//    NSString *response = [[NSString alloc] initWithData:[request responseData] encoding:NSUTF8StringEncoding];
-//    return response;
-//
-//
-//}
-//
-//
-//- (void)llamadaSoap{
-//
-//    static NSString *feedURLString = @"http://80.37.242.37.9090/G4ws.svc";
-//    NSMutableURLRequest *faURLRequest =
-//    [NSMutableURLRequest requestWithURL:[NSURL URLWithString:feedURLString]];
-//    
-//    [faURLRequest addValue:@"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-//    [faURLRequest setHTTPMethod:@"POST"];
-//    [faURLRequest addValue:@"http://tempuri.org/IDownloadService/GetChanges" forHTTPHeaderField:@"SOAPAction"];
-//    
-//    NSString *localLastSync;
-//    
-//    NSString *soapMessage = @"<wsdl:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\">\n"
-//                             "<wdsl:Body >\n"
-//                             "<GetChanges xmlns=\"http://tempuri.org/\">\n"
-//                             "</GetChanges>\n"
-//                             "</wdsl:Body>\n"
-//                             "</wdsl:Envelope>\n";
-//    [faURLRequest setHTTPBody:[soapMessage dataUsingEncoding:NSUTF8StringEncoding]];
-//    
-//    id downloadConnection = [[NSURLConnection alloc] initWithRequest:faURLRequest delegate:self];
-//
-//}
+
+- (void)llamadaSoap{
+    [self processRequest];
+    
+}
+
+- (void)processRequest{
+    
+    BasicHttpBinding_IG4WSBinding *binding = [G4WSSvc BasicHttpBinding_IG4WSBinding] ;
+    binding.logXMLInOut = YES;
+    
+    
+    BasicHttpBinding_IG4WSBindingOperation* request = [[BasicHttpBinding_IG4WSBindingOperation alloc]init];
+    BasicHttpBinding_IG4WSBindingResponse *response = [binding Prueba_ConexionUsingParameters:request];
+    NSArray *responseHeaders = response.headers;
+    NSArray *responseBodyParts = response.bodyParts;
+    
+    for(id header in responseHeaders) {
+        NSLog(@"header %@",header);
+    }
+    
+    for(id bodyPart in responseBodyParts) {
+        NSLog(@"header %@",bodyPart);
+    }
+}
+
+
+
+
 
 + (NSObject *)jsonBySynchRequest:(ASIFormDataRequest *)request {
     if (request == nil)
@@ -104,7 +89,7 @@
 
 
 + (BOOL)loginWithUser:(NSString *)username andPassword:(NSString *)password {
-    if(username && ![username isEqualToString:@""] && password && ![password isEqualToString:@""]){
+    if(!username || [username isEqualToString:@""] || !password || [password isEqualToString:@""]){
         return NO;
     }
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:kWSLoginURL]];
@@ -148,7 +133,7 @@
 
 
 + (BOOL)configureUserkey:(NSString *)key WithUser:(NSString *)username andPassword:(NSString *)password {
-    if(username && ![username isEqualToString:@""] && password && ![password isEqualToString:@""] && key && ![key isEqualToString:@""]){
+    if(!username || [username isEqualToString:@""] || !password || [password isEqualToString:@""] || !key || [key isEqualToString:@""]){
         return NO;
     }
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:kWSConfigureKeyUser]];

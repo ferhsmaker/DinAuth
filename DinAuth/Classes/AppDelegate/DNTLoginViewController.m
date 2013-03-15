@@ -40,8 +40,8 @@
 
 - (IBAction)btnEntrarPressed:(id)sender{
     
-    //if([DNTWSManager loginWithUser:self.txtUsr.text andPassword:self.txtPwd.text]){
-    if([self.txtUsr.text isEqualToString:@"root"] && [self.txtPwd.text isEqualToString:@"root"]){
+    if([DNTWSManager loginWithUser:self.txtUsr.text andPassword:self.txtPwd.text]){
+    //if([self.txtUsr.text isEqualToString:@"root"] && [self.txtPwd.text isEqualToString:@"root"]){
         [self cargarAlertaClaveConUsuario:self.txtUsr.text yPassword:self.txtPwd.text];
     }else{
         UIAlertView *alertLoginFailed = [[UIAlertView alloc]initWithTitle:@"Error al autentificarse" message:@"Revise sus datos" delegate:nil cancelButtonTitle:@"Volver a intentarlo" otherButtonTitles: nil];
